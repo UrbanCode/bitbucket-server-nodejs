@@ -112,10 +112,10 @@ client.tags.get('~userslug', repoKey); // Promise
 
 ### pull requests
 
-Get all pull requests for a repo.
+Get paginated pull requests for a repo.
 
 ```
-client.prs.get(projectKey, repoSlug); // Promise
+client.prs.get(projectKey, repoSlug, { state: ALL, start: 2, limit: 10 } ); // Promise
 ```
 
 Get all pull requests for a project.
@@ -143,6 +143,14 @@ client.prs.getCombined(null, null, { state: "MERGED" }); // Promise
 ```
 
 *Possible states: ALL, OPEN, DECLINED or MERGED.*
+
+### pull request activities
+
+Get all activities for a pull request of a repo.
+
+```
+client.activities.get(projectKey, repoSlug, pullRequestId); // Promise
+```
 
 ### hooks
 
@@ -203,6 +211,7 @@ client.users.getUser(userSlug); // Promise
  - /rest/api/1.0/projects/{projectKey}/repos/{repositorySlug}/browse [GET]
  - /rest/api/1.0/projects/{projectKey}/repos/{repositorySlug}/branches [GET]
  - /rest/api/1.0/projects/{projectKey}/repos/{repositorySlug}/pull-requests [GET]
+ - /rest/api/1.0/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/activities [GET]
  - /rest/api/1.0/projects/{projectKey}/repos/{repositorySlug}/settings/hooks [GET]
  - /rest/api/1.0/projects/{projectKey}/repos/{repositorySlug}/settings/hooks/{hookKey}/enabled [PUT]
  - /rest/api/1.0/projects/{projectKey}/repos/{repositorySlug}/tags [GET]

@@ -10,3 +10,4 @@ require('./tags/get.spec');
 require('./users/get.spec');
 require('./settings/get.spec');
 require('./commits/get.spec');
+require('./activities/get.spec');

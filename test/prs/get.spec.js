@@ -33,7 +33,7 @@ describe('Pull Requests', function () {
 
         assert.equal(
           requestGet.getCall(0).args[ 0 ].uri,
-          'http://localhost/projects/PRJ/repos/my-repo/pull-requests?limit=1000&state=OPEN'
+          'http://localhost/projects/PRJ/repos/my-repo/pull-requests?limit=1000&start=0&state=OPEN'
         );
 
         assert.equal(
@@ -49,7 +49,7 @@ describe('Pull Requests', function () {
         assert.deepEqual(prs.values[ 0 ], expected.values[ 0 ]);
         assert.equal(
           requestGet.getCall(1).args[ 0 ].uri,
-          'http://localhost/projects/PRJ/repos/my-repo/pull-requests?limit=1000&state=OPEN'
+          'http://localhost/projects/PRJ/repos/my-repo/pull-requests?limit=1000&start=0&state=OPEN'
         );
         done();
       });
@@ -79,7 +79,7 @@ describe('Pull Requests', function () {
         );
         assert.equal(
           requestGet.getCall(2).args[ 0 ].uri,
-          'http://localhost/projects/PRJ/repos/my-repo/pull-requests?limit=1000&state=OPEN'
+          'http://localhost/projects/PRJ/repos/my-repo/pull-requests?limit=1000&start=0&state=OPEN'
         );
         done();
       });

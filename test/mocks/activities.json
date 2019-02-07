@@ -1,0 +1,29 @@
+{
+  "size": 1,
+  "limit": 25,
+  "isLastPage": true,
+  "start": 0,
+  "values": [
+    {
+      "id": 48,
+      "createdDate": 1549312765192,
+      "user": {
+        "name": "hzhong",
+        "emailAddress": "hzhong@somewhere.com",
+        "id": 1,
+        "displayName": "Heather Zhong",
+        "active": true,
+        "slug": "hzhong",
+        "type": "NORMAL",
+        "links": {
+          "self": [
+            {
+              "href": "http://localhost/users/hzhong"
+            }
+          ]
+        }
+      },
+      "action": "OPENED"
+    }
+  ]
+}
